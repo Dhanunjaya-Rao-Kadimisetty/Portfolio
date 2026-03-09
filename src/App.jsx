@@ -13,6 +13,8 @@ const sectionTitleClass = "section-heading text-2xl sm:text-3xl font-semibold te
 const githubProfileUrl = "https://github.com/Dhanunjaya-Rao-Kadimisetty";
 const linkedinProfileUrl = "https://linkedin.com/in/dhanunjaya-rao-kadimisetty";
 const contactEmail = "saidhanunjaya19@gmail.com";
+const basePath = import.meta.env.BASE_URL;
+const assetUrl = (path) => `${basePath}${path}`;
 const ctaHighlights = [
   "Usually reply within 24 hours",
   "Open to freelance and full-time roles",
@@ -108,7 +110,7 @@ export default function App() {
     const description =
       "Portfolio of Dhanunjaya Rao Kadimisetty, a full stack developer building polished React, Node.js, and WordPress projects with responsive UI and technical SEO awareness.";
     const pageUrl = window.location.origin + window.location.pathname;
-    const imageUrl = `${window.location.origin}/profile.jpg`;
+    const imageUrl = new URL(assetUrl("profile.jpg"), window.location.origin).toString();
 
     document.title = pageTitle;
 
@@ -323,7 +325,7 @@ export default function App() {
 
               <div className="hero-actions mt-8 flex flex-wrap gap-4">
                 <a
-                  href="/resume.pdf"
+                  href={assetUrl("resume.pdf")}
                   className="px-5 py-3 rounded-full bg-blue-500 text-white font-medium transition duration-300 hover:-translate-y-1 hover:bg-blue-400 hover:shadow-[0_12px_32px_rgba(59,130,246,0.35)]"
                 >
                   Download Resume
@@ -342,12 +344,12 @@ export default function App() {
                 <div className="hero-photo-glow" />
                 <div className="hero-photo-wrap">
                   <img
-                    src="/profile.jpg"
+                    src={assetUrl("profile.jpg")}
                     alt="Portrait of Dhanunjaya Rao"
                     loading="lazy"
                     decoding="async"
                     onError={(event) => {
-                      event.currentTarget.src = "/profile-placeholder.svg";
+                      event.currentTarget.src = assetUrl("profile-placeholder.svg");
                     }}
                     className="hero-photo w-[17rem] h-[21rem] sm:w-[20rem] sm:h-[24rem] md:w-[22rem] md:h-[27rem] rounded-[2rem] object-cover bg-gray-900"
                   />
@@ -658,7 +660,7 @@ export default function App() {
                   data-reveal
                   style={{ "--delay": "300ms" }}
                   className="reveal-up contact-social-link"
-                  href="/resume.pdf"
+                  href={assetUrl("resume.pdf")}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open resume"
