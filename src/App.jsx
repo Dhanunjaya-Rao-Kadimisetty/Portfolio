@@ -13,71 +13,162 @@ const sectionTitleClass = "section-heading text-2xl sm:text-3xl font-semibold te
 const githubProfileUrl = "https://github.com/Dhanunjaya-Rao-Kadimisetty";
 const linkedinProfileUrl = "https://linkedin.com/in/dhanunjaya-rao-kadimisetty";
 const contactEmail = "saidhanunjaya19@gmail.com";
+const contactPhone = "+91 9347351291";
+const contactLocation = "Visakhapatnam, Andhra Pradesh, India";
 const basePath = import.meta.env.BASE_URL;
 const assetUrl = (path) => `${basePath}${path}`;
 const ctaHighlights = [
-  "Usually reply within 24 hours",
-  "Open to freelance and full-time roles",
-  "Frontend polish with backend practicality",
+  "Hands-on Off-Page & On-Page SEO execution",
+  "Backlink acquisition & competitor profile analysis",
+  "Technical SEO with Computer Science fundamentals",
 ];
-const ctaProjectTypes = ["Portfolio Website", "Landing Page", "Web App UI", "Full Stack Build", "Other"];
+const ctaProjectTypes = [
+  "SEO & Link Building Campaign",
+  "Technical SEO Audit",
+  "Keyword Research & Strategy",
+  "Portfolio / Business Website",
+  "Other",
+];
 
 const navItems = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
+  { href: "#education", label: "Education & Certifications" },
   { href: "#contact", label: "Contact" },
+];
+
+const experienceData = [
+  {
+    role: "SEO Executive Intern",
+    company: "Ascend Soft Solutions",
+    period: "Aug 2026 – Oct 2026",
+    location: "Visakhapatnam, Andhra Pradesh",
+    bullets: [
+      "Execute off-page SEO activities to support website authority, backlink acquisition, and search visibility.",
+      "Build backlinks through profile creation, social bookmarking, blog posting, and relevant website submissions.",
+      "Research competitor backlink profiles and identify potential websites for link-building opportunities.",
+      "Work with anchor text and destination URLs to maintain consistency between backlink placements and target pages.",
+      "Maintain backlink records, monitor published links, and check website crawling and indexing status.",
+      "Prepare SEO activity updates and reports for assigned projects and communicate progress to the team.",
+    ],
+  },
 ];
 
 const skillGroups = [
   {
-    title: "Frontend",
-    description: "Interface development focused on clean layout, responsiveness, and polished user experience.",
-    items: ["HTML", "CSS", "JavaScript", "React", "Responsive Web Design", "WordPress"],
+    title: "SEO & Link Building",
+    description: "Off-page and on-page optimization, backlink acquisition, profile creation, and competitor research.",
+    items: [
+      "On-Page SEO",
+      "Off-page SEO",
+      "Link Building",
+      "Backlink Analysis",
+      "Profile Creation",
+      "Social Bookmarking",
+      "Blog Posting",
+      "Competitor Research",
+      "Anchor Text Optimization",
+    ],
   },
   {
-    title: "Backend",
-    description: "Practical server-side work for APIs, application logic, and structured data management.",
-    items: ["Node.js", "Express", "PostgreSQL", "Java Programming (Basics)"],
+    title: "Research & Monitoring",
+    description: "Search engine tooling, performance monitoring, indexing verification, and analytical reporting.",
+    items: [
+      "Keyword Research Fundamentals",
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "Crawling & Indexing Checks",
+      "SEO Reporting",
+      "SEMrush",
+      "Ahrefs",
+    ],
   },
   {
-    title: "Tools",
-    description: "Workflow and collaboration tools used to manage code, assets, and project delivery smoothly.",
-    items: ["Git & GitHub", "Canva"],
+    title: "Technical Web Knowledge",
+    description: "Core web technologies, semantic markup, and technical search engine prerequisites.",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "React.js",
+      "PostgreSQL",
+      "Node.js",
+      "Express.js",
+      "Responsive Web Design",
+      "Website Structure",
+      "Meta Tags Fundamentals",
+      "URL Structure",
+      "XML Sitemap & Robots.txt Fundamentals",
+    ],
   },
   {
-    title: "Specialized",
-    description: "Additional capabilities that strengthen discoverability, architecture, and decentralized project work.",
-    items: ["SEO Basics", "Ethereum"],
+    title: "Other Tools & Productivity",
+    description: "Workflow, documentation, data tracking, and design tools supporting SEO campaigns and web delivery.",
+    items: ["Google Sheets", "Microsoft Excel", "Microsoft Word", "Git", "GitHub", "Canva"],
   },
 ];
 
 const projects = [
   {
     name: "CivicShield",
-    subtitle: "Digital voting system with trust-focused architecture",
+    subtitle: "Trust-Centric Digital Voting System",
     description:
-      "A full-stack voting platform built with React, Node.js, PostgreSQL, and Ethereum for secure vote storage, validation, and transparent results.",
-    tags: ["React", "Node.js", "PostgreSQL", "Ethereum"],
+      "Developed an academic web application using React.js, Node.js, Express.js, PostgreSQL, and Ethereum Ganache. Applied web development and database concepts relevant to website structure and technical problem-solving.",
+    tags: ["React.js", "Node.js", "PostgreSQL", "Ethereum Ganache"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/CivicShield-A-Trust-Centric-Digital-Voting-System",
   },
   {
-    name: "EmployeeHub",
-    subtitle: "Employee management dashboard for CRUD workflows",
+    name: "SEO-Optimized Legacy Website",
+    subtitle: "Shri Pratti Narayana Rao Garu Tribute",
     description:
-      "A role-aware employee management application with backend APIs, data operations, and a practical UI structure for internal workflows.",
-    tags: ["React", "REST APIs", "Database"],
-    link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Employee-Management-System",
-  },
-  {
-    name: "Tribute Website",
-    subtitle: "Responsive informational website with SEO focus",
-    description:
-      "A structured content website designed for better readability, responsiveness, discoverability, and cleaner front-end presentation.",
-    tags: ["Responsive UI", "SEO", "Performance"],
+      "Developed a responsive tribute and informational website documenting Shri Pratti Narayana Rao Garu's biography, contributions, photographs, and legacy. Implemented SEO practices including page titles, meta descriptions, heading hierarchy, keyword optimization, internal linking, descriptive image alt text, XML sitemap, and Google Search Console.",
+    tags: ["On-Page SEO", "Google Search Console", "XML Sitemap", "Responsive UI"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Shri-Pratti-NarayanaRaoGaru-Website",
   },
+  {
+    name: "Personal Portfolio Website",
+    subtitle: "Modern Responsive Portfolio with SEO Focus",
+    description:
+      "Created a personal portfolio to present technical skills and projects, gaining practical exposure to website structure, content presentation, metadata optimization, and web technologies.",
+    tags: ["React", "Tailwind CSS", "Technical SEO", "Performance"],
+    link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Portfolio",
+  },
+  {
+    name: "EmployeeHub",
+    subtitle: "Employee Management Dashboard",
+    description:
+      "A role-aware employee management application with backend APIs, database operations, and a practical UI structure for internal workflows.",
+    tags: ["React", "REST APIs", "PostgreSQL", "Node.js"],
+    link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Employee-Management-System",
+  },
+];
+
+const educationData = [
+  {
+    degree: "B.Tech in Computer Science and Engineering",
+    year: "2026",
+    institution: "Baba Institute of Technology and Science",
+    board: "JNTU-GV",
+    score: "Percentage: 79.9%",
+  },
+  {
+    degree: "Diploma in Electronics and Communication Engineering",
+    year: "2023",
+    institution: "Chaitanya Engineering College",
+    board: "SBTET",
+    score: "Percentage: 80.9%",
+  },
+];
+
+const certifications = [
+  "HubSpot SEO Certification",
+  "SEMrush Academy – Keyword Research",
+  "Google Digital Garage – Digital Marketing",
+  "Legacy Responsive Web Design V8 – freecodecamp",
 ];
 
 export default function App() {
@@ -106,9 +197,9 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const pageTitle = "Dhanunjaya Rao | Full Stack Developer Portfolio";
+    const pageTitle = "Dhanunjaya Rao | SEO Executive & Digital Marketing Portfolio";
     const description =
-      "Portfolio of Dhanunjaya Rao Kadimisetty, a full stack developer building polished React, Node.js, and WordPress projects with responsive UI and technical SEO awareness.";
+      "Portfolio of Dhanunjaya Rao Kadimisetty, SEO Executive and Computer Science graduate specializing in off-page & on-page SEO, link building, backlink analysis, search console monitoring, and technical web development.";
     const pageUrl = window.location.origin + window.location.pathname;
     const imageUrl = new URL(assetUrl("profile.jpg"), window.location.origin).toString();
 
@@ -160,12 +251,33 @@ export default function App() {
         {
           "@type": "Person",
           name: "Dhanunjaya Rao Kadimisetty",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "SEO Executive",
           email: `mailto:${contactEmail}`,
+          telephone: contactPhone,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Visakhapatnam",
+            addressRegion: "Andhra Pradesh",
+            addressCountry: "India",
+          },
           image: imageUrl,
           sameAs: [githubProfileUrl, linkedinProfileUrl],
           url: pageUrl,
-          knowsAbout: ["React", "JavaScript", "Node.js", "PostgreSQL", "WordPress", "SEO", "Web Development"],
+          knowsAbout: [
+            "Search Engine Optimization (SEO)",
+            "Off-Page SEO",
+            "Link Building",
+            "Backlink Analysis",
+            "Google Search Console",
+            "Bing Webmaster Tools",
+            "SEMrush",
+            "Ahrefs",
+            "Keyword Research",
+            "React.js",
+            "JavaScript",
+            "Node.js",
+            "PostgreSQL",
+          ],
         },
         {
           "@type": "WebSite",
@@ -261,7 +373,7 @@ export default function App() {
                     Dhanunjaya Rao
                   </span>
                   <span className="hidden sm:block text-xs text-slate-400 tracking-[0.13em] uppercase">
-                    Full Stack Developer
+                    SEO Executive | Digital Marketing
                   </span>
                 </span>
               </a>
@@ -309,18 +421,17 @@ export default function App() {
             className="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-16 sm:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] items-center gap-14 lg:gap-16"
           >
             <div data-reveal className="reveal-up is-visible">
-              <p className="hero-kicker">Portfolio / Full Stack Developer</p>
+              <p className="hero-kicker">Portfolio / SEO Executive & Digital Marketing</p>
               <p className="hero-greeting">
                 Hello! I am <span>Dhanunjaya Rao</span>
               </p>
-              <p className="hero-pretitle">A developer who</p>
+              <p className="hero-pretitle">An SEO Executive who</p>
               <h1 className="hero-name text-[1.9rem] sm:text-[2.3rem] lg:text-[2.65rem] font-bold text-blue-100 mb-5 leading-[1.02]">
-                builds strong <span className="hero-accent">web presence</span> with polished UI.
+                drives search <span className="hero-accent">visibility & authority</span> with technical SEO.
               </h1>
 
               <p className="hero-lead max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed">
-                I create React frontends, Node.js applications, and portfolio-style websites that look modern, feel
-                clean, and communicate your value clearly from the first screen.
+                SEO Executive with hands-on experience in off-page SEO, link building, backlink creation, competitor research, and indexing checks. Combining a Computer Science background with data-driven search engine optimization to build strong website authority.
               </p>
 
               <div className="hero-actions mt-8 flex flex-wrap gap-4">
@@ -359,7 +470,7 @@ export default function App() {
                 </div>
                 <div className="hero-photo-note">
                   <span className="hero-photo-note-label">Available For</span>
-                  <strong className="hero-photo-note-value">Freelance opportunities and frontend or full stack developer roles.</strong>
+                  <strong className="hero-photo-note-value">SEO Executive, Digital Marketing, and Technical SEO roles.</strong>
                 </div>
               </div>
             </div>
@@ -372,22 +483,61 @@ export default function App() {
                   About Me
                 </h2>
                 <p data-reveal className="reveal-up text-gray-300 leading-relaxed" style={{ "--delay": "90ms" }}>
-                  I am a Computer Science student and web developer who enjoys building interfaces that feel modern,
-                  readable, and properly structured. My work combines frontend presentation with backend fundamentals,
-                  so I can build products that are both visually stronger and functionally useful.
+                  I am an SEO Executive Intern and B.Tech Computer Science and Engineering graduate with hands-on
+                  experience in off-page SEO, link building, backlink creation, profile submissions, social bookmarking,
+                  blog posting, and competitor backlink research. Familiar with Google Search Console, Bing Webmaster
+                  Tools, SEMrush, anchor text optimization, and indexing checks, with a strong interest in on-page SEO,
+                  technical SEO, keyword research, content optimization, and data-driven search engine optimization.
                 </p>
               </div>
 
               <div className="about-grid">
                 <div data-reveal className="reveal-up about-card" style={{ "--delay": "150ms" }}>
                   <span className="about-card-label">Current direction</span>
-                  <p>Creating portfolio-grade UI, responsive websites, and full stack applications with clean code.</p>
+                  <p>Executing off-page SEO campaigns, link-building outreach, website authority building, and data-driven search visibility.</p>
                 </div>
                 <div data-reveal className="reveal-up about-card" style={{ "--delay": "230ms" }}>
                   <span className="about-card-label">What I care about</span>
-                  <p>Semantic structure, maintainable layouts, practical backend work, and credible first impressions.</p>
+                  <p>Crawlability & indexing health, high-quality backlink acquisition, technical site structure, keyword research, and measurable search performance.</p>
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section id="experience" className={sectionClass}>
+            <h2 data-reveal className={`${sectionTitleClass} reveal-up`}>
+              Professional Experience
+            </h2>
+
+            <div className="space-y-6">
+              {experienceData.map((exp, index) => (
+                <article
+                  key={exp.company}
+                  data-reveal
+                  className={`${cardClass} reveal-up`}
+                  style={{ "--delay": `${80 + index * 100}ms` }}
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 mb-1">{exp.role}</p>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-white">{exp.company}</h3>
+                      <p className="text-xs text-slate-400 mt-0.5">{exp.location}</p>
+                    </div>
+                    <div className="inline-block px-3 py-1 rounded-full border border-blue-300/20 bg-blue-400/10 text-xs sm:text-sm text-blue-200 self-start sm:self-center">
+                      {exp.period}
+                    </div>
+                  </div>
+
+                  <ul className="mt-4 space-y-2.5 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    {exp.bullets.map((bullet, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400 shrink-0" aria-hidden="true" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
             </div>
           </section>
 
@@ -441,8 +591,7 @@ export default function App() {
             </h2>
 
             <p data-reveal className="reveal-up text-slate-300 leading-relaxed max-w-2xl mb-8" style={{ "--delay": "90ms" }}>
-              My toolkit is organized around the capabilities clients usually care about most: strong frontend polish,
-              practical backend support, reliable workflow tools, and specialized web knowledge.
+              My toolkit combines hands-on SEO execution—off-page backlink building, search console monitoring, and competitor research—with foundational web engineering and technical SEO capabilities.
             </p>
 
             <div className="skills-compact-grid">
@@ -474,15 +623,52 @@ export default function App() {
             </div>
           </section>
 
+          <section id="education" className={sectionClass}>
+            <h2 data-reveal className={`${sectionTitleClass} reveal-up`}>
+              Education & Certifications
+            </h2>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              <div data-reveal className="reveal-up space-y-4" style={{ "--delay": "100ms" }}>
+                <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 font-semibold mb-2">Education</p>
+                {educationData.map((edu) => (
+                  <div key={edu.degree} className={`${cardClass} p-5`}>
+                    <div className="flex justify-between items-start gap-3 mb-2">
+                      <h3 className="text-lg font-semibold text-white">{edu.degree}</h3>
+                      <span className="shrink-0 px-2.5 py-0.5 rounded-full border border-blue-300/20 bg-blue-400/10 text-xs text-blue-200">
+                        {edu.year}
+                      </span>
+                    </div>
+                    <p className="text-slate-300 text-sm">{edu.institution} ({edu.board})</p>
+                    <p className="mt-2 text-xs font-medium text-blue-300/90">{edu.score}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div data-reveal className="reveal-up" style={{ "--delay": "180ms" }}>
+                <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 font-semibold mb-2">Certifications</p>
+                <div className={`${cardClass} p-5 space-y-3.5`}>
+                  {certifications.map((cert) => (
+                    <div key={cert} className="flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-slate-950/40">
+                      <svg className="w-5 h-5 text-blue-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                      <span className="text-sm sm:text-base text-gray-200 font-medium">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section id="cta" className={sectionClass}>
             <div data-reveal className="reveal-up cta-shell">
               <div className="cta-layout">
                 <div className="cta-copy">
                   <span className="contact-label">Start a Project</span>
-                  <h2 className="text-2xl sm:text-3xl font-semibold text-blue-100 mb-3">Let&apos;s build something sharp.</h2>
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-blue-100 mb-3">Let&apos;s grow your search presence.</h2>
                   <p className="text-gray-300 max-w-xl">
-                    I design and build portfolio sites, landing pages, and practical web applications that feel clean,
-                    modern, and credible from the first screen.
+                    I deliver targeted SEO campaigns, high-quality backlink creation, competitor research, and technical site optimizations to elevate your website authority and search engine rankings.
                   </p>
 
                   <div className="cta-highlight-list" aria-label="Call to action highlights">
@@ -499,6 +685,7 @@ export default function App() {
                     <a href={`mailto:${contactEmail}`} className="cta-email-link">
                       {contactEmail}
                     </a>
+                    <span className="text-xs text-slate-400 block mt-1.5">Phone: {contactPhone} • {contactLocation}</span>
                   </div>
                 </div>
 
@@ -565,7 +752,7 @@ export default function App() {
                         id="subject"
                         type="text"
                         name="subject"
-                        placeholder="Landing page redesign for a startup"
+                        placeholder="SEO campaign or website audit"
                         className={fieldClass}
                       />
                     </label>
@@ -610,18 +797,21 @@ export default function App() {
               </h2>
 
               <p data-reveal className="reveal-up contact-intro" style={{ "--delay": "80ms" }}>
-                I am currently looking for freelance opportunities and frontend or full stack developer roles. If you
+                I am currently looking for SEO Executive, Digital Marketing, and Technical SEO opportunities. If you
                 have a project or position in mind, let&apos;s connect.
               </p>
 
-              <a
-                data-reveal
-                style={{ "--delay": "140ms" }}
-                className="reveal-up contact-email-link"
-                href={`mailto:${contactEmail}`}
-              >
-                {contactEmail}
-              </a>
+              <div data-reveal style={{ "--delay": "140ms" }} className="reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 text-sm sm:text-base text-slate-300 my-4">
+                <a href={`mailto:${contactEmail}`} className="hover:text-blue-200 transition-colors">
+                  📧 {contactEmail}
+                </a>
+                <span className="hidden sm:inline text-slate-600">•</span>
+                <a href={`tel:${contactPhone.replace(/\s+/g, '')}`} className="hover:text-blue-200 transition-colors">
+                  📞 {contactPhone}
+                </a>
+                <span className="hidden sm:inline text-slate-600">•</span>
+                <span>📍 {contactLocation}</span>
+              </div>
 
               <div className="contact-socials">
                 <a
