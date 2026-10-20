@@ -18,15 +18,15 @@ const contactLocation = "Visakhapatnam, Andhra Pradesh, India";
 const basePath = import.meta.env.BASE_URL;
 const assetUrl = (path) => `${basePath}${path}`;
 const ctaHighlights = [
+  "Full Stack engineering with React, Node.js & PostgreSQL",
   "Hands-on Off-Page & On-Page SEO execution",
-  "Backlink acquisition & competitor profile analysis",
-  "Technical SEO with Computer Science fundamentals",
+  "Search console monitoring & competitor profile analysis",
 ];
 const ctaProjectTypes = [
+  "Full Stack Web Application",
+  "Frontend / React UI Development",
   "SEO & Link Building Campaign",
   "Technical SEO Audit",
-  "Keyword Research & Strategy",
-  "Portfolio / Business Website",
   "Other",
 ];
 
@@ -59,6 +59,24 @@ const experienceData = [
 
 const skillGroups = [
   {
+    title: "Full Stack & Web Dev",
+    description: "Frontend and backend development, responsive UI, REST APIs, and database engineering.",
+    items: [
+      "React.js",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Responsive Web Design",
+      "Website Structure",
+      "Meta Tags Fundamentals",
+      "XML Sitemap & Robots.txt",
+    ],
+  },
+  {
     title: "SEO & Link Building",
     description: "Off-page and on-page optimization, backlink acquisition, profile creation, and competitor research.",
     items: [
@@ -87,28 +105,9 @@ const skillGroups = [
     ],
   },
   {
-    title: "Technical Web Knowledge",
-    description: "Core web technologies, semantic markup, and technical search engine prerequisites.",
-    items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap",
-      "React.js",
-      "PostgreSQL",
-      "Node.js",
-      "Express.js",
-      "Responsive Web Design",
-      "Website Structure",
-      "Meta Tags Fundamentals",
-      "URL Structure",
-      "XML Sitemap & Robots.txt Fundamentals",
-    ],
-  },
-  {
-    title: "Other Tools & Productivity",
-    description: "Workflow, documentation, data tracking, and design tools supporting SEO campaigns and web delivery.",
-    items: ["Google Sheets", "Microsoft Excel", "Microsoft Word", "Git", "GitHub", "Canva"],
+    title: "Tools & Collaboration",
+    description: "Workflow, documentation, data tracking, and design tools supporting development and SEO workflows.",
+    items: ["Git", "GitHub", "Google Sheets", "Microsoft Excel", "Microsoft Word", "Canva"],
   },
 ];
 
@@ -117,8 +116,8 @@ const projects = [
     name: "CivicShield",
     subtitle: "Trust-Centric Digital Voting System",
     description:
-      "Developed an academic web application using React.js, Node.js, Express.js, PostgreSQL, and Ethereum Ganache. Applied web development and database concepts relevant to website structure and technical problem-solving.",
-    tags: ["React.js", "Node.js", "PostgreSQL", "Ethereum Ganache"],
+      "Developed an academic full stack web application using React.js, Node.js, Express.js, PostgreSQL, and Ethereum Ganache. Applied web development and database concepts relevant to website structure and technical problem-solving.",
+    tags: ["Full Stack", "React.js", "Node.js", "PostgreSQL", "Ethereum Ganache"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/CivicShield-A-Trust-Centric-Digital-Voting-System",
   },
   {
@@ -126,7 +125,7 @@ const projects = [
     subtitle: "Shri Pratti Narayana Rao Garu Tribute",
     description:
       "Developed a responsive tribute and informational website documenting Shri Pratti Narayana Rao Garu's biography, contributions, photographs, and legacy. Implemented SEO practices including page titles, meta descriptions, heading hierarchy, keyword optimization, internal linking, descriptive image alt text, XML sitemap, and Google Search Console.",
-    tags: ["On-Page SEO", "Google Search Console", "XML Sitemap", "Responsive UI"],
+    tags: ["SEO & Web", "Google Search Console", "XML Sitemap", "Responsive UI"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Shri-Pratti-NarayanaRaoGaru-Website",
   },
   {
@@ -134,7 +133,7 @@ const projects = [
     subtitle: "Modern Responsive Portfolio with SEO Focus",
     description:
       "Created a personal portfolio to present technical skills and projects, gaining practical exposure to website structure, content presentation, metadata optimization, and web technologies.",
-    tags: ["React", "Tailwind CSS", "Technical SEO", "Performance"],
+    tags: ["Frontend & SEO", "React", "Tailwind CSS", "Technical SEO"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Portfolio",
   },
   {
@@ -142,7 +141,7 @@ const projects = [
     subtitle: "Employee Management Dashboard",
     description:
       "A role-aware employee management application with backend APIs, database operations, and a practical UI structure for internal workflows.",
-    tags: ["React", "REST APIs", "PostgreSQL", "Node.js"],
+    tags: ["Full Stack", "React", "REST APIs", "PostgreSQL", "Node.js"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Employee-Management-System",
   },
 ];
@@ -197,9 +196,9 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const pageTitle = "Dhanunjaya Rao | SEO Executive & Digital Marketing Portfolio";
+    const pageTitle = "Dhanunjaya Rao | Full Stack Developer & SEO Executive Portfolio";
     const description =
-      "Portfolio of Dhanunjaya Rao Kadimisetty, SEO Executive and Computer Science graduate specializing in off-page & on-page SEO, link building, backlink analysis, search console monitoring, and technical web development.";
+      "Portfolio of Dhanunjaya Rao Kadimisetty, Full Stack Developer and SEO Executive specializing in React, Node.js, PostgreSQL, off-page & on-page SEO, link building, backlink analysis, and search console monitoring.";
     const pageUrl = window.location.origin + window.location.pathname;
     const imageUrl = new URL(assetUrl("profile.jpg"), window.location.origin).toString();
 
@@ -251,7 +250,7 @@ export default function App() {
         {
           "@type": "Person",
           name: "Dhanunjaya Rao Kadimisetty",
-          jobTitle: "SEO Executive",
+          jobTitle: "Full Stack Developer & SEO Executive",
           email: `mailto:${contactEmail}`,
           telephone: contactPhone,
           address: {
@@ -264,6 +263,13 @@ export default function App() {
           sameAs: [githubProfileUrl, linkedinProfileUrl],
           url: pageUrl,
           knowsAbout: [
+            "Full Stack Development",
+            "Frontend Development",
+            "React.js",
+            "JavaScript",
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
             "Search Engine Optimization (SEO)",
             "Off-Page SEO",
             "Link Building",
@@ -273,10 +279,6 @@ export default function App() {
             "SEMrush",
             "Ahrefs",
             "Keyword Research",
-            "React.js",
-            "JavaScript",
-            "Node.js",
-            "PostgreSQL",
           ],
         },
         {
@@ -373,7 +375,7 @@ export default function App() {
                     Dhanunjaya Rao
                   </span>
                   <span className="hidden sm:block text-xs text-slate-400 tracking-[0.13em] uppercase">
-                    SEO Executive | Digital Marketing
+                    Full Stack Developer & SEO Executive
                   </span>
                 </span>
               </a>
@@ -421,17 +423,17 @@ export default function App() {
             className="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-16 sm:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] items-center gap-14 lg:gap-16"
           >
             <div data-reveal className="reveal-up is-visible">
-              <p className="hero-kicker">Portfolio / SEO Executive & Digital Marketing</p>
+              <p className="hero-kicker">Portfolio / Full Stack Developer & SEO Executive</p>
               <p className="hero-greeting">
                 Hello! I am <span>Dhanunjaya Rao</span>
               </p>
-              <p className="hero-pretitle">An SEO Executive who</p>
+              <p className="hero-pretitle">A Full Stack Developer & SEO Executive who</p>
               <h1 className="hero-name text-[1.9rem] sm:text-[2.3rem] lg:text-[2.65rem] font-bold text-blue-100 mb-5 leading-[1.02]">
-                drives search <span className="hero-accent">visibility & authority</span> with technical SEO.
+                builds scalable <span className="hero-accent">web apps & drives</span> search visibility.
               </h1>
 
               <p className="hero-lead max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed">
-                SEO Executive with hands-on experience in off-page SEO, link building, backlink creation, competitor research, and indexing checks. Combining a Computer Science background with data-driven search engine optimization to build strong website authority.
+                Combining full stack web development (React, Node.js, PostgreSQL) with hands-on off-page SEO, link building, competitor research, and indexing checks to engineer high-performance, search-optimized web applications.
               </p>
 
               <div className="hero-actions mt-8 flex flex-wrap gap-4">
@@ -470,7 +472,7 @@ export default function App() {
                 </div>
                 <div className="hero-photo-note">
                   <span className="hero-photo-note-label">Available For</span>
-                  <strong className="hero-photo-note-value">SEO Executive, Digital Marketing, and Technical SEO roles.</strong>
+                  <strong className="hero-photo-note-value">Full Stack Developer, Frontend Developer, and SEO Executive roles.</strong>
                 </div>
               </div>
             </div>
@@ -483,22 +485,22 @@ export default function App() {
                   About Me
                 </h2>
                 <p data-reveal className="reveal-up text-gray-300 leading-relaxed" style={{ "--delay": "90ms" }}>
-                  I am an SEO Executive Intern and B.Tech Computer Science and Engineering graduate with hands-on
-                  experience in off-page SEO, link building, backlink creation, profile submissions, social bookmarking,
-                  blog posting, and competitor backlink research. Familiar with Google Search Console, Bing Webmaster
-                  Tools, SEMrush, anchor text optimization, and indexing checks, with a strong interest in on-page SEO,
-                  technical SEO, keyword research, content optimization, and data-driven search engine optimization.
+                  I am a Computer Science & Engineering graduate, Full Stack Developer, and SEO Executive with hands-on
+                  experience across both modern web development and search engine optimization. My technical background spans
+                  building responsive React frontends, Node.js and Express APIs, and PostgreSQL databases, coupled with proven
+                  off-page SEO execution: link building, backlink creation, competitor research, and Google Search Console monitoring.
+                  This dual capability allows me to build robust digital products with built-in discoverability.
                 </p>
               </div>
 
               <div className="about-grid">
                 <div data-reveal className="reveal-up about-card" style={{ "--delay": "150ms" }}>
                   <span className="about-card-label">Current direction</span>
-                  <p>Executing off-page SEO campaigns, link-building outreach, website authority building, and data-driven search visibility.</p>
+                  <p>Developing full stack web applications and executing data-driven SEO campaigns that elevate website authority and user engagement.</p>
                 </div>
                 <div data-reveal className="reveal-up about-card" style={{ "--delay": "230ms" }}>
                   <span className="about-card-label">What I care about</span>
-                  <p>Crawlability & indexing health, high-quality backlink acquisition, technical site structure, keyword research, and measurable search performance.</p>
+                  <p>Clean code architecture, responsive UI polish, crawlability & indexing health, high-quality backlinks, and measurable web performance.</p>
                 </div>
               </div>
             </div>
@@ -591,7 +593,7 @@ export default function App() {
             </h2>
 
             <p data-reveal className="reveal-up text-slate-300 leading-relaxed max-w-2xl mb-8" style={{ "--delay": "90ms" }}>
-              My toolkit combines hands-on SEO execution—off-page backlink building, search console monitoring, and competitor research—with foundational web engineering and technical SEO capabilities.
+              My toolkit bridges full stack software engineering (React, Node.js, PostgreSQL) with hands-on search engine optimization, link-building outreach, and technical site performance.
             </p>
 
             <div className="skills-compact-grid">
@@ -665,10 +667,10 @@ export default function App() {
             <div data-reveal className="reveal-up cta-shell">
               <div className="cta-layout">
                 <div className="cta-copy">
-                  <span className="contact-label">Start a Project</span>
-                  <h2 className="text-2xl sm:text-3xl font-semibold text-blue-100 mb-3">Let&apos;s grow your search presence.</h2>
+                  <span className="contact-label">Start a Project / Hire Me</span>
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-blue-100 mb-3">Let&apos;s build and scale your presence.</h2>
                   <p className="text-gray-300 max-w-xl">
-                    I deliver targeted SEO campaigns, high-quality backlink creation, competitor research, and technical site optimizations to elevate your website authority and search engine rankings.
+                    Whether you need a full stack web application, a responsive frontend interface, or a strategic SEO and link-building campaign, I am ready to collaborate.
                   </p>
 
                   <div className="cta-highlight-list" aria-label="Call to action highlights">
@@ -752,7 +754,7 @@ export default function App() {
                         id="subject"
                         type="text"
                         name="subject"
-                        placeholder="SEO campaign or website audit"
+                        placeholder="Full stack web app or SEO project"
                         className={fieldClass}
                       />
                     </label>
@@ -797,8 +799,8 @@ export default function App() {
               </h2>
 
               <p data-reveal className="reveal-up contact-intro" style={{ "--delay": "80ms" }}>
-                I am currently looking for SEO Executive, Digital Marketing, and Technical SEO opportunities. If you
-                have a project or position in mind, let&apos;s connect.
+                I am actively looking for Full Stack Developer, Frontend Developer, and SEO Executive roles. If you
+                have an open position or project in mind, let&apos;s connect.
               </p>
 
               <div data-reveal style={{ "--delay": "140ms" }} className="reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 text-sm sm:text-base text-slate-300 my-4">
