@@ -11,7 +11,7 @@ const fieldClass =
 const sectionClass = "max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 scroll-mt-28";
 const sectionTitleClass = "section-heading text-2xl sm:text-3xl font-semibold text-blue-100 mb-8";
 const githubProfileUrl = "https://github.com/Dhanunjaya-Rao-Kadimisetty";
-const linkedinProfileUrl = "https://linkedin.com/in/dhanunjaya-rao-kadimisetty";
+const linkedinProfileUrl = "https://www.linkedin.com/in/dhanunjaya-rao-kadimisetty/";
 const contactEmail = "saidhanunjaya19@gmail.com";
 const contactPhone = "+91 9347351291";
 const contactLocation = "Visakhapatnam, Andhra Pradesh, India";
@@ -198,9 +198,12 @@ export default function App() {
   useEffect(() => {
     const pageTitle = "Dhanunjaya Rao | Full Stack Developer & SEO Executive Portfolio";
     const description =
-      "Portfolio of Dhanunjaya Rao Kadimisetty, Full Stack Developer and SEO Executive specializing in React, Node.js, PostgreSQL, off-page & on-page SEO, link building, backlink analysis, and search console monitoring.";
-    const pageUrl = window.location.origin + window.location.pathname;
-    const imageUrl = new URL(assetUrl("profile.jpg"), window.location.origin).toString();
+      "Portfolio of Dhanunjaya Rao Kadimisetty, Full Stack Developer and SEO Executive specializing in React, Node.js, PostgreSQL, link building, and technical SEO.";
+    const pageUrl =
+      window.location.hostname === "localhost"
+        ? window.location.origin + window.location.pathname
+        : "https://dhanunjayarao-portfolio.vercel.app/";
+    const imageUrl = "https://dhanunjayarao-portfolio.vercel.app/profile.jpg";
 
     document.title = pageTitle;
 
@@ -369,7 +372,16 @@ export default function App() {
         <nav className="fixed top-0 left-0 w-full z-20 px-4 sm:px-6 pt-3" aria-label="Primary">
           <div className="max-w-6xl mx-auto rounded-[1.75rem] border border-blue-200/15 bg-slate-950/65 backdrop-blur-xl shadow-[0_12px_36px_rgba(2,6,23,0.45)]">
             <div className="px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
-              <a href="#home" className="brand-mark group inline-flex items-center gap-3 shrink-0">
+              <a
+                href="/"
+                onClick={(e) => {
+                  if (window.location.pathname === "/" || window.location.pathname === "") {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
+                className="brand-mark group inline-flex items-center gap-3 shrink-0"
+              >
                 <span className="leading-tight">
                   <span className="block text-sm sm:text-base font-semibold tracking-[0.03em] text-blue-100">
                     Dhanunjaya Rao
@@ -424,12 +436,14 @@ export default function App() {
           >
             <div data-reveal className="reveal-up is-visible">
               <p className="hero-kicker">Portfolio / Full Stack Developer & SEO Executive</p>
-              <p className="hero-greeting">
-                Hello! I am <span>Dhanunjaya Rao</span>
-              </p>
-              <p className="hero-pretitle">A Full Stack Developer & SEO Executive who</p>
-              <h1 className="hero-name text-[1.9rem] sm:text-[2.3rem] lg:text-[2.65rem] font-bold text-blue-100 mb-5 leading-[1.02]">
-                builds scalable <span className="hero-accent">web apps & drives</span> search visibility.
+              <h1 className="hero-title-group mb-5">
+                <span className="hero-greeting block">
+                  Hello! I am <span>Dhanunjaya Rao</span>
+                </span>
+                <span className="hero-pretitle block">A Full Stack Developer & SEO Executive who</span>
+                <span className="hero-name block text-[1.9rem] sm:text-[2.3rem] lg:text-[2.65rem] font-bold text-blue-100 leading-[1.02]">
+                  builds scalable <span className="hero-accent">web apps & drives</span> search visibility.
+                </span>
               </h1>
 
               <p className="hero-lead max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed">
@@ -870,6 +884,24 @@ export default function App() {
             </div>
           </section>
         </main>
+
+        <footer className="border-t border-white/10 bg-slate-950/80 py-8 px-4 sm:px-6 text-sm text-slate-400">
+          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© {new Date().getFullYear()} Dhanunjaya Rao Kadimisetty. All rights reserved.</p>
+            <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Footer Navigation">
+              <a href="/" className="text-blue-300 hover:text-white transition-colors duration-200">Back to Home</a>
+              <a href="#about" className="hover:text-white transition-colors duration-200">
+                About
+              </a>
+              <a href="#projects" className="hover:text-white transition-colors duration-200">
+                Projects
+              </a>
+              <a href="#contact" className="hover:text-white transition-colors duration-200">
+                Contact
+              </a>
+            </nav>
+          </div>
+        </footer>
       </div>
     </div>
   );
