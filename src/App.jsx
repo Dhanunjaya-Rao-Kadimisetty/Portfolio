@@ -16,6 +16,8 @@ const contactEmail = "saidhanunjaya19@gmail.com";
 const contactPhone = "+91 9347351291";
 const contactLocation = "Visakhapatnam, Andhra Pradesh, India";
 const basePath = import.meta.env.BASE_URL;
+const productionBaseUrl = "https://dhanunjayarao-portfolio.vercel.app/";
+const resumeUrl = "https://dhanunjayarao-portfolio.vercel.app/resume.pdf";
 const assetUrl = (path) => `${basePath}${path}`;
 const ctaHighlights = [
   "Full Stack engineering with React, Node.js & PostgreSQL",
@@ -202,8 +204,8 @@ export default function App() {
     const pageUrl =
       window.location.hostname === "localhost"
         ? window.location.origin + window.location.pathname
-        : "https://dhanunjayarao-portfolio.vercel.app/";
-    const imageUrl = "https://dhanunjayarao-portfolio.vercel.app/profile.jpg";
+        : productionBaseUrl;
+    const imageUrl = `${productionBaseUrl}profile.jpg`;
 
     document.title = pageTitle;
 
@@ -452,7 +454,7 @@ export default function App() {
 
               <div className="hero-actions mt-8 flex flex-wrap gap-4">
                 <a
-                  href={assetUrl("resume.pdf")}
+                  href={resumeUrl}
                   className="px-5 py-3 rounded-full bg-blue-500 text-white font-medium transition duration-300 hover:-translate-y-1 hover:bg-blue-400 hover:shadow-[0_12px_32px_rgba(59,130,246,0.35)]"
                 >
                   Download Resume
@@ -794,9 +796,12 @@ export default function App() {
                   </div>
 
                   {formState === "success" && (
-                    <p className="cta-form-status text-green-400 text-sm">
-                      Message sent successfully. I will get back to you soon.
-                    </p>
+                    <div className="cta-form-status text-green-400 text-sm mt-3 p-4 rounded-2xl bg-green-950/40 border border-green-500/20 text-left">
+                      <p className="font-semibold mb-1">Message sent successfully! Thank you for reaching out.</p>
+                      <p className="text-slate-300 text-xs leading-relaxed">
+                        I specialize in responsive React frontend development, Node.js API engineering, and data-driven SEO campaigns. I will review your project requirements and respond within 24 hours.
+                      </p>
+                    </div>
                   )}
                   {formState === "error" && (
                     <p className="cta-form-status text-red-400 text-sm">Something went wrong. Please try again.</p>
@@ -815,6 +820,10 @@ export default function App() {
               <p data-reveal className="reveal-up contact-intro" style={{ "--delay": "80ms" }}>
                 I am actively looking for Full Stack Developer, Frontend Developer, and SEO Executive roles. If you
                 have an open position or project in mind, let&apos;s connect.
+              </p>
+
+              <p data-reveal className="reveal-up text-slate-300 text-sm sm:text-base max-w-3xl mx-auto text-center mt-3 mb-6 leading-relaxed" style={{ "--delay": "110ms" }}>
+                With a strong technical foundation in React.js, Tailwind CSS, JavaScript, and Node.js backend integration, I engineer high-speed, accessible web applications optimized for search engine crawlability and top organic rankings. My hands-on background spans full-lifecycle web engineering, PostgreSQL database operations, off-page link building, backlink profile analysis, and Google Search Console monitoring. Let&apos;s discuss how my full stack engineering and SEO execution capabilities can accelerate your team&apos;s technical goals.
               </p>
 
               <div data-reveal style={{ "--delay": "140ms" }} className="reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 text-sm sm:text-base text-slate-300 my-4">
@@ -866,7 +875,7 @@ export default function App() {
                   data-reveal
                   style={{ "--delay": "300ms" }}
                   className="reveal-up contact-social-link"
-                  href={assetUrl("resume.pdf")}
+                  href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open resume"
@@ -889,7 +898,7 @@ export default function App() {
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>© {new Date().getFullYear()} Dhanunjaya Rao Kadimisetty. All rights reserved.</p>
             <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Footer Navigation">
-              <a href="/" className="text-blue-300 hover:text-white transition-colors duration-200">Back to Home</a>
+              <a href="/" className="text-blue-300 hover:text-white transition-colors duration-200">Go to Home</a>
               <a href="#about" className="hover:text-white transition-colors duration-200">
                 About
               </a>
