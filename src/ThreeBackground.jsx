@@ -1,8 +1,13 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-export default function ThreeBackground() {
+export default function ThreeBackground({ onReady }) {
   const ref = useRef();
+  const onReadyRef = useRef(onReady);
+
+  useEffect(() => {
+    onReadyRef.current = onReady;
+  }, [onReady]);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -236,6 +241,12 @@ export default function ThreeBackground() {
 
     animate();
 
+    if (typeof onReadyRef.current === "function") {
+      requestAnimationFrame(() => {
+        onReadyRef.current();
+      });
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("pointermove", handlePointerMove);
@@ -267,6 +278,7 @@ export default function ThreeBackground() {
         height: "100%",
         zIndex: 1,
         pointerEvents: "none",
+        transition: "opacity 0.6s ease-out",
       }}
       aria-hidden="true"
     />

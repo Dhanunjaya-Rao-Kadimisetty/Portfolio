@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect, useState } from "react";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ThreeBackground = lazy(() => import("./ThreeBackground"));
 
@@ -176,6 +177,7 @@ export default function App() {
   const [formState, setFormState] = useState("idle");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
@@ -309,25 +311,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    let cancelled = false;
-    const enableBackground = () => {
-      if (!cancelled) {
-        setShowBackground(true);
-      }
-    };
-
-    if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(enableBackground, { timeout: 1200 });
-      return () => {
-        cancelled = true;
-        window.cancelIdleCallback(idleId);
-      };
-    }
-
-    const timerId = window.setTimeout(enableBackground, 700);
+    setShowBackground(true);
+    const failsafeTimer = window.setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
     return () => {
-      cancelled = true;
-      window.clearTimeout(timerId);
+      window.clearTimeout(failsafeTimer);
     };
   }, []);
 
@@ -359,6 +348,17 @@ export default function App() {
 
   return (
     <div className="portfolio-page min-h-screen text-white">
+      {/* Full-screen Loading Overlay to prevent FOUC / canvas flicker */}
+      <div
+        className={`fixed inset-0 z-50 flex items-center justify-center bg-slate-950 transition-opacity duration-700 ease-out ${
+          isLoading ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        aria-hidden={!isLoading}
+        role="status"
+        aria-label="Loading interactive canvas"
+      >
+        <LoadingSpinner />
+      </div>
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 z-50 bg-blue-500 text-white px-3 py-2 rounded"
@@ -366,8 +366,8 @@ export default function App() {
         Skip to content
       </a>
       {showBackground && (
-        <Suspense fallback={null}>
-          <ThreeBackground />
+        <Suspense fallback={<LoadingSpinner />}>
+          <ThreeBackground onReady={() => setIsLoading(false)} />
         </Suspense>
       )}
       <div className="relative z-10">
