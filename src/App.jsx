@@ -18,7 +18,7 @@ const contactPhone = "+91 9347351291";
 const contactLocation = "Visakhapatnam, Andhra Pradesh, India";
 const basePath = import.meta.env.BASE_URL;
 const productionBaseUrl = "https://dhanunjayarao-portfolio.vercel.app/";
-const resumeUrl = "https://dhanunjayarao-portfolio.vercel.app/resume.pdf";
+const resumeUrl = "https://dhanunjayarao-portfolio.vercel.app/DhanunjayaRao_Kadimisetty_Resume.pdf";
 const assetUrl = (path) => `${basePath}${path}`;
 const ctaHighlights = [
   "Full Stack engineering with React, Node.js & PostgreSQL",
