@@ -170,7 +170,9 @@ const certifications = [
   "HubSpot SEO Certification",
   "SEMrush Academy – Keyword Research",
   "Google Digital Garage – Digital Marketing",
+  "HTML Essentials – Cisco Networking Academy",
   "Legacy Responsive Web Design V8 – freecodecamp",
+  "Digital Marketing Certified – HubSpot Academy" 
 ];
 
 export default function App() {
