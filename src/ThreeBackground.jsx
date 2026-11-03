@@ -1,13 +1,8 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-export default function ThreeBackground({ onReady }) {
+export default function ThreeBackground() {
   const ref = useRef();
-  const onReadyRef = useRef(onReady);
-
-  useEffect(() => {
-    onReadyRef.current = onReady;
-  }, [onReady]);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -241,11 +236,6 @@ export default function ThreeBackground({ onReady }) {
 
     animate();
 
-    if (typeof onReadyRef.current === "function") {
-      requestAnimationFrame(() => {
-        onReadyRef.current();
-      });
-    }
 
     return () => {
       window.removeEventListener("resize", handleResize);
