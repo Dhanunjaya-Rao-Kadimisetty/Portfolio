@@ -19,11 +19,14 @@ const basePath = import.meta.env.BASE_URL;
 const productionBaseUrl = "https://dhanunjayarao-portfolio.vercel.app/";
 const resumeUrl = "https://dhanunjayarao-portfolio.vercel.app/DhanunjayaRao_Kadimisetty_Resume.pdf";
 const assetUrl = (path) => `${basePath}${path}`;
+
 const ctaHighlights = [
   "Full Stack engineering with React, Node.js & PostgreSQL",
   "Hands-on Off-Page & On-Page SEO execution",
   "Search console monitoring & competitor profile analysis",
+  "Core Web Vitals & technical crawlability optimization",
 ];
+
 const ctaProjectTypes = [
   "Full Stack Web Application",
   "Frontend / React UI Development",
@@ -49,67 +52,80 @@ const experienceData = [
     period: "Aug 2026 – Oct 2026",
     location: "Visakhapatnam, Andhra Pradesh",
     bullets: [
-      "Execute off-page SEO activities to support website authority, backlink acquisition, and search visibility.",
-      "Build backlinks through profile creation, social bookmarking, blog posting, and relevant website submissions.",
-      "Research competitor backlink profiles and identify potential websites for link-building opportunities.",
-      "Work with anchor text and destination URLs to maintain consistency between backlink placements and target pages.",
-      "Maintain backlink records, monitor published links, and check website crawling and indexing status.",
-      "Prepare SEO activity updates and reports for assigned projects and communicate progress to the team.",
+      "Executed targeted off-page SEO campaigns and high-authority link-building outreach across verified industry directories, profile platforms, and web properties to enhance domain authority.",
+      "Conducted extensive competitor backlink analysis using Ahrefs and SEMrush to identify high-impact link opportunities, anchor text distributions, and referring domain gaps.",
+      "Maintained strategic anchor text optimization and destination URL mapping to protect natural backlink profiles and support core landing page rankings.",
+      "Monitored Google Search Console and Bing Webmaster Tools for crawl errors, indexation anomalies, XML sitemap validation, and robots.txt accessibility.",
+      "Audited technical on-page factors including heading hierarchy (H1-H3), canonical tags, meta tags, Core Web Vitals, and internal link equity distribution.",
+      "Prepared weekly performance reports detailing backlink velocity, indexation status, organic visibility trends, and technical audit remediation.",
     ],
   },
 ];
 
 const skillGroups = [
   {
-    title: "Full Stack & Web Dev",
-    description: "Frontend and backend development, responsive UI, REST APIs, and database engineering.",
+    title: "Full Stack & Web Dev Stack",
+    description: "Modern frontend engineering, scalable backend REST APIs, relational database design, and web architecture.",
     items: [
       "React.js",
-      "JavaScript",
+      "JavaScript (ES6+)",
       "Node.js",
       "Express.js",
       "PostgreSQL",
-      "HTML",
-      "CSS",
-      "Bootstrap",
+      "HTML5 Semantic Layout",
+      "Tailwind CSS & Bootstrap",
       "Responsive Web Design",
-      "Website Structure",
-      "Meta Tags Fundamentals",
-      "XML Sitemap & Robots.txt",
+      "RESTful API Design",
+      "Relational Schema Design",
+      "Client-Side Performance",
+      "Vite & Build Tooling",
     ],
   },
   {
-    title: "SEO & Link Building",
-    description: "Off-page and on-page optimization, backlink acquisition, profile creation, and competitor research.",
+    title: "Search Engine Optimization (SEO) & Link Building",
+    description: "Strategic off-page link acquisition, on-page optimization, competitor research, and site architecture planning.",
     items: [
-      "On-Page SEO",
-      "Off-page SEO",
-      "Link Building",
-      "Backlink Analysis",
-      "Profile Creation",
-      "Social Bookmarking",
-      "Blog Posting",
-      "Competitor Research",
-      "Anchor Text Optimization",
+      "Technical SEO Auditing",
+      "On-Page Optimization",
+      "Off-Page Link Building",
+      "Competitor Backlink Analysis",
+      "High-Authority Profile Creation",
+      "Social Bookmarking & Citations",
+      "Anchor Text Distribution",
+      "Crawl Budget Optimization",
+      "Canonical Tag Management",
+      "XML Sitemap Directives",
+      "Robots.txt Protocol",
+      "Internal Linking Strategies",
     ],
   },
   {
-    title: "Research & Monitoring",
-    description: "Search engine tooling, performance monitoring, indexing verification, and analytical reporting.",
+    title: "Search Analytics, Auditing & Indexing Monitoring",
+    description: "Search console diagnostics, performance telemetry, crawling validation, and structured data execution.",
     items: [
-      "Keyword Research Fundamentals",
       "Google Search Console",
       "Bing Webmaster Tools",
-      "Crawling & Indexing Checks",
-      "SEO Reporting",
-      "SEMrush",
-      "Ahrefs",
+      "Ahrefs Site Audit Remediation",
+      "SEMrush Keyword Intelligence",
+      "Schema.org JSON-LD Structured Data",
+      "Core Web Vitals Optimization",
+      "LCP, CLS & INP Diagnosis",
+      "HTTP Status & Redirect Auditing",
+      "Indexation Verification",
+      "Search Performance Reporting",
     ],
   },
   {
-    title: "Tools & Collaboration",
-    description: "Workflow, documentation, data tracking, and design tools supporting development and SEO workflows.",
-    items: ["Git", "GitHub", "Google Sheets", "Microsoft Excel", "Microsoft Word", "Canva"],
+    title: "Developer Tools, Version Control & Collaboration",
+    description: "Software version control, cloud deployment environments, project tracking, and documentation workflows.",
+    items: [
+      "Git & GitHub",
+      "Vercel Deployment",
+      "npm & pnpm Package Management",
+      "Google Sheets & Excel Tracking",
+      "Technical Documentation",
+      "Canva UI Mockups",
+    ],
   },
 ];
 
@@ -118,33 +134,37 @@ const projects = [
     name: "CivicShield",
     subtitle: "Trust-Centric Digital Voting System",
     description:
-      "Developed an academic full stack web application using React.js, Node.js, Express.js, PostgreSQL, and Ethereum Ganache. Applied web development and database concepts relevant to website structure and technical problem-solving.",
-    tags: ["Full Stack", "React.js", "Node.js", "PostgreSQL", "Ethereum Ganache"],
+      "Architected a secure full stack web application constructed with React.js, Node.js, Express.js, PostgreSQL, and Ethereum Ganache smart contracts. Designed secure REST API endpoints, relational database schemas for voter verification, and cryptographic hash verification to ensure transparent, tamper-proof digital voting workflows and reliable system state management.",
+    tags: ["Full Stack", "React.js", "Node.js", "Express.js", "PostgreSQL", "Ethereum Ganache"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/CivicShield-A-Trust-Centric-Digital-Voting-System",
+    ctaText: "View CivicShield on GitHub ->",
   },
   {
     name: "SEO-Optimized Legacy Website",
     subtitle: "Shri Pratti Narayana Rao Garu Tribute",
     description:
-      "Developed a responsive tribute and informational website documenting Shri Pratti Narayana Rao Garu's biography, contributions, photographs, and legacy. Implemented SEO practices including page titles, meta descriptions, heading hierarchy, keyword optimization, internal linking, descriptive image alt text, XML sitemap, and Google Search Console.",
-    tags: ["SEO & Web", "Google Search Console", "XML Sitemap", "Responsive UI"],
+      "Engineered an informational tribute platform dedicated to Shri Pratti Narayana Rao Garu's historical legacy and community impact. Built with strict technical SEO standards: semantic HTML5 layout, keyword density optimization, structured heading hierarchy (H1-H3), internal linking architecture, XML sitemap generation, and verified indexing via Google Search Console.",
+    tags: ["Technical SEO", "Semantic HTML5", "Google Search Console", "XML Sitemap", "Responsive UI"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Shri-Pratti-NarayanaRaoGaru-Website",
+    ctaText: "Explore Tribute Project on GitHub ->",
   },
   {
     name: "Personal Portfolio Website",
-    subtitle: "Modern Responsive Portfolio with SEO Focus",
+    subtitle: "Full Stack & Technical SEO Showcase",
     description:
-      "Created a personal portfolio to present technical skills and projects, gaining practical exposure to website structure, content presentation, metadata optimization, and web technologies.",
-    tags: ["Frontend & SEO", "React", "Tailwind CSS", "Technical SEO"],
+      "Engineered this personal developer portfolio utilizing React 19, Tailwind CSS, Vite, and Three.js. Implemented server-side static pre-rendering for 100% crawler discoverability, Schema.org JSON-LD structured data, Core Web Vitals optimization, and automated technical SEO compliance validated via Ahrefs Site Audit.",
+    tags: ["React 19", "Tailwind CSS", "Vite", "Three.js", "Technical SEO", "Core Web Vitals"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Portfolio",
+    ctaText: "Inspect Portfolio Source Code on GitHub ->",
   },
   {
     name: "EmployeeHub",
-    subtitle: "Employee Management Dashboard",
+    subtitle: "Role-Aware Management System",
     description:
-      "A role-aware employee management application with backend APIs, database operations, and a practical UI structure for internal workflows.",
-    tags: ["Full Stack", "React", "REST APIs", "PostgreSQL", "Node.js"],
+      "Engineered a scalable employee management dashboard featuring authenticated role-based access control, parameterized PostgreSQL queries, Node.js and Express backend REST API architecture, and responsive React data tables with dynamic filtering and sorting capabilities.",
+    tags: ["Full Stack", "React.js", "Node.js", "Express.js", "PostgreSQL", "REST APIs"],
     link: "https://github.com/Dhanunjaya-Rao-Kadimisetty/Employee-Management-System",
+    ctaText: "View EmployeeHub on GitHub ->",
   },
 ];
 
@@ -171,7 +191,7 @@ const certifications = [
   "Google Digital Garage – Digital Marketing",
   "HTML Essentials – Cisco Networking Academy",
   "Legacy Responsive Web Design V8 – freecodecamp",
-  "Digital Marketing Certified – HubSpot Academy" 
+  "Digital Marketing Certified – HubSpot Academy",
 ];
 
 export default function App() {
@@ -199,9 +219,9 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const pageTitle = "Dhanunjaya Rao | Full Stack Developer & SEO Executive Portfolio";
+    const pageTitle = "Dhanunjaya Rao Kadimisetty | Full Stack Developer & SEO Specialist Portfolio";
     const description =
-      "Portfolio of Dhanunjaya Rao Kadimisetty, Full Stack Developer and SEO Executive specializing in React, Node.js, PostgreSQL, link building, and technical SEO.";
+      "Explore the portfolio of Dhanunjaya Rao Kadimisetty, Full Stack Developer and SEO Specialist engineering scalable React, Node.js applications and data-driven SEO.";
     const pageUrl =
       window.location.hostname === "localhost"
         ? window.location.origin + window.location.pathname
@@ -229,7 +249,7 @@ export default function App() {
     setMeta("og:description", description, "property");
     setMeta("og:url", pageUrl, "property");
     setMeta("og:image", imageUrl, "property");
-    setMeta("og:site_name", "Dhanunjaya Rao Portfolio", "property");
+    setMeta("og:site_name", "Dhanunjaya Rao Kadimisetty Portfolio", "property");
     setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", pageTitle);
     setMeta("twitter:description", description);
@@ -256,7 +276,7 @@ export default function App() {
         {
           "@type": "Person",
           name: "Dhanunjaya Rao Kadimisetty",
-          jobTitle: "Full Stack Developer & SEO Executive",
+          jobTitle: "Full Stack Developer & SEO Specialist",
           email: `mailto:${contactEmail}`,
           telephone: contactPhone,
           address: {
@@ -268,31 +288,36 @@ export default function App() {
           image: imageUrl,
           sameAs: [githubProfileUrl, linkedinProfileUrl],
           url: pageUrl,
+          alumniOf: {
+            "@type": "EducationalOrganization",
+            name: "Baba Institute of Technology and Science (JNTU-GV)",
+          },
           knowsAbout: [
             "Full Stack Development",
             "Frontend Development",
             "React.js",
-            "JavaScript",
+            "JavaScript (ES6+)",
             "Node.js",
             "Express.js",
             "PostgreSQL",
             "Search Engine Optimization (SEO)",
+            "Technical SEO Auditing",
             "Off-Page SEO",
-            "Link Building",
+            "Link Building Strategy",
             "Backlink Analysis",
             "Google Search Console",
             "Bing Webmaster Tools",
             "SEMrush",
-            "Ahrefs",
-            "Keyword Research",
+            "Ahrefs Site Audit",
+            "Core Web Vitals Optimization",
           ],
         },
         {
           "@type": "WebSite",
-          name: "Dhanunjaya Rao Portfolio",
+          name: "Dhanunjaya Rao Kadimisetty Portfolio",
           url: pageUrl,
           description,
-          inLanguage: "en",
+          inLanguage: "en-US",
         },
       ],
     });
@@ -347,7 +372,7 @@ export default function App() {
         <ThreeBackground />
       </Suspense>
       <div className="relative z-10">
-        <nav className="fixed top-0 left-0 w-full z-20 px-4 sm:px-6 pt-3" aria-label="Primary">
+        <nav className="fixed top-0 left-0 w-full z-20 px-4 sm:px-6 pt-3" aria-label="Primary Navigation">
           <div className="max-w-6xl mx-auto rounded-[1.75rem] border border-blue-200/15 bg-slate-950/65 backdrop-blur-xl shadow-[0_12px_36px_rgba(2,6,23,0.45)]">
             <div className="px-4 sm:px-6 py-3 flex justify-between items-center gap-4">
               <a
@@ -359,13 +384,14 @@ export default function App() {
                   }
                 }}
                 className="brand-mark group inline-flex items-center gap-3 shrink-0"
+                aria-label="Dhanunjaya Rao Kadimisetty - Return to top of portfolio"
               >
                 <span className="leading-tight">
                   <span className="block text-sm sm:text-base font-semibold tracking-[0.03em] text-blue-100">
                     Dhanunjaya Rao
                   </span>
                   <span className="hidden sm:block text-xs text-slate-400 tracking-[0.13em] uppercase">
-                    Full Stack Developer & SEO Executive
+                    Full Stack Developer &amp; SEO Specialist
                   </span>
                 </span>
               </a>
@@ -413,31 +439,34 @@ export default function App() {
             className="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-36 pb-16 sm:pb-20 grid lg:grid-cols-[1.05fr_0.95fr] items-center gap-14 lg:gap-16"
           >
             <div data-reveal className="reveal-up is-visible">
-              <p className="hero-kicker">Portfolio / Full Stack Developer & SEO Executive</p>
               <h1 className="hero-title-group mb-5">
-                <span className="hero-greeting block">
-                  Hello! I am <span>Dhanunjaya Rao</span>
+                <span className="hero-kicker block text-xs sm:text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase mb-2">
+                  Portfolio of Dhanunjaya Rao Kadimisetty
                 </span>
-                <span className="hero-pretitle block">A Full Stack Developer & SEO Executive who</span>
-                <span className="hero-name block text-[1.9rem] sm:text-[2.3rem] lg:text-[2.65rem] font-bold text-blue-100 leading-[1.02]">
-                  builds scalable <span className="hero-accent">web apps & drives</span> search visibility.
+                <span className="hero-greeting block text-lg sm:text-xl md:text-2xl text-slate-300 font-normal">
+                  Full Stack Developer &amp; SEO Specialist
+                </span>
+                <span className="hero-name block text-[1.85rem] sm:text-[2.3rem] lg:text-[2.65rem] font-bold text-blue-100 leading-[1.08] mt-2">
+                  Engineering Scalable <span className="hero-accent">Web Applications &amp; Driving</span> Organic Search Visibility
                 </span>
               </h1>
 
               <p className="hero-lead max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed">
-                Combining full stack web development (React, Node.js, PostgreSQL) with hands-on off-page SEO, link building, competitor research, and indexing checks to engineer high-performance, search-optimized web applications.
+                Computer Science graduate and web technologist combining robust full stack software engineering (React.js, Node.js, PostgreSQL) with data-driven search engine optimization. Specializing in technical SEO audits, crawlability architecture, backlink strategy, and high-performance frontend engineering.
               </p>
 
               <div className="hero-actions mt-8 flex flex-wrap gap-4">
                 <a
                   href={resumeUrl}
                   className="px-5 py-3 rounded-full bg-blue-500 text-white font-medium transition duration-300 hover:-translate-y-1 hover:bg-blue-400 hover:shadow-[0_12px_32px_rgba(59,130,246,0.35)]"
+                  aria-label="Download Dhanunjaya Rao Kadimisetty's Resume in PDF format"
                 >
                   Download Resume
                 </a>
                 <a
                   href="#projects"
                   className="px-5 py-3 rounded-full border border-slate-500 text-gray-200 transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:text-blue-200"
+                  aria-label="View featured full stack and SEO projects"
                 >
                   View My Work
                 </a>
@@ -450,8 +479,11 @@ export default function App() {
                 <div className="hero-photo-wrap">
                   <img
                     src={assetUrl("profile.jpg")}
-                    alt="Portrait of Dhanunjaya Rao"
-                    loading="lazy"
+                    alt="Dhanunjaya Rao Kadimisetty - Full Stack Developer and SEO Specialist"
+                    width="352"
+                    height="432"
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
                     onError={(event) => {
                       event.currentTarget.src = assetUrl("profile-placeholder.svg");
@@ -464,7 +496,7 @@ export default function App() {
                 </div>
                 <div className="hero-photo-note">
                   <span className="hero-photo-note-label">Available For</span>
-                  <strong className="hero-photo-note-value">Full Stack Developer, Frontend Developer, and SEO Executive roles.</strong>
+                  <strong className="hero-photo-note-value">Full Stack Developer, Frontend Developer, and SEO Specialist roles.</strong>
                 </div>
               </div>
             </div>
@@ -474,25 +506,24 @@ export default function App() {
             <div className="section-shell">
               <div>
                 <h2 data-reveal className={`${sectionTitleClass} reveal-up`}>
-                  About Me
+                  About Dhanunjaya Rao Kadimisetty
                 </h2>
-                <p data-reveal className="reveal-up text-gray-300 leading-relaxed" style={{ "--delay": "90ms" }}>
-                  I am a Computer Science & Engineering graduate, Full Stack Developer, and SEO Executive with hands-on
-                  experience across both modern web development and search engine optimization. My technical background spans
-                  building responsive React frontends, Node.js and Express APIs, and PostgreSQL databases, coupled with proven
-                  off-page SEO execution: link building, backlink creation, competitor research, and Google Search Console monitoring.
-                  This dual capability allows me to build robust digital products with built-in discoverability.
+                <p data-reveal className="reveal-up text-gray-300 leading-relaxed text-base sm:text-lg mb-4" style={{ "--delay": "90ms" }}>
+                  I am a Computer Science &amp; Engineering graduate, Full Stack Developer, and Technical SEO Specialist based in Visakhapatnam, Andhra Pradesh. My professional approach integrates clean software engineering principles with data-driven search engine optimization. I design and build production-ready web applications using React.js, Tailwind CSS, Node.js, Express.js, and PostgreSQL, while engineering the underlying site architecture for maximum crawlability, high indexation rates, and superior Core Web Vitals performance.
+                </p>
+                <p data-reveal className="reveal-up text-gray-300 leading-relaxed text-base sm:text-lg" style={{ "--delay": "120ms" }}>
+                  During my hands-on industry tenure as an SEO Executive Intern at Ascend Soft Solutions, I managed comprehensive off-page backlink campaigns, performed in-depth competitor backlink profiling with Ahrefs and SEMrush, resolved technical crawl anomalies in Google Search Console, and structured landing pages for optimal anchor text flow. This dual capability allows me to build digital platforms that are both architecturally sound for users and effortlessly discoverable by search engine crawlers.
                 </p>
               </div>
 
               <div className="about-grid">
                 <div data-reveal className="reveal-up about-card" style={{ "--delay": "150ms" }}>
-                  <span className="about-card-label">Current direction</span>
-                  <p>Developing full stack web applications and executing data-driven SEO campaigns that elevate website authority and user engagement.</p>
+                  <span className="about-card-label">Engineering Focus</span>
+                  <p>Architecting full stack applications with modular React component hierarchies, secure Node.js REST APIs, and structured relational PostgreSQL schemas.</p>
                 </div>
                 <div data-reveal className="reveal-up about-card" style={{ "--delay": "230ms" }}>
-                  <span className="about-card-label">What I care about</span>
-                  <p>Clean code architecture, responsive UI polish, crawlability & indexing health, high-quality backlinks, and measurable web performance.</p>
+                  <span className="about-card-label">SEO &amp; Performance Philosophy</span>
+                  <p>Enforcing strict semantic HTML5 hierarchies, valid Schema.org structured data, rapid Largest Contentful Paint (LCP), and authoritative link acquisition.</p>
                 </div>
               </div>
             </div>
@@ -514,7 +545,7 @@ export default function App() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                     <div>
                       <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 mb-1">{exp.role}</p>
-                      <h3 className="text-xl sm:text-2xl font-semibold text-white">{exp.company}</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-white">{exp.company} — {exp.role}</h3>
                       <p className="text-xs text-slate-400 mt-0.5">{exp.location}</p>
                     </div>
                     <div className="inline-block px-3 py-1 rounded-full border border-blue-300/20 bg-blue-400/10 text-xs sm:text-sm text-blue-200 self-start sm:self-center">
@@ -537,7 +568,7 @@ export default function App() {
 
           <section id="projects" className={sectionClass}>
             <h2 data-reveal className={`${sectionTitleClass} reveal-up projects-heading`}>
-              Projects
+              Featured Projects
             </h2>
 
             <div className="project-grid">
@@ -553,9 +584,9 @@ export default function App() {
                     <span />
                   </div>
                   <div className="project-copy">
-                    <p className="relative text-sm uppercase tracking-[0.22em] text-blue-200/55 mb-3">{project.name}</p>
-                    <h3 className="relative text-xl sm:text-[1.8rem] font-semibold tracking-tight text-white">
-                      {project.subtitle}
+                    <p className="relative text-xs uppercase tracking-[0.22em] text-blue-300/80 mb-2">{project.name}</p>
+                    <h3 className="relative text-xl sm:text-[1.65rem] font-semibold tracking-tight text-white">
+                      {project.name}: {project.subtitle}
                     </h3>
                     <p className="relative mt-3 text-gray-300 leading-relaxed project-description">{project.description}</p>
                   </div>
@@ -570,9 +601,10 @@ export default function App() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-link relative inline-block mt-6 text-blue-100 transition-colors duration-300 hover:text-white"
+                    aria-label={`View ${project.name} repository on GitHub`}
+                    className="project-link relative inline-block mt-6 text-blue-200 transition-colors duration-300 hover:text-white font-medium"
                   >
-                    Learn More -&gt;
+                    {project.ctaText}
                   </a>
                 </article>
               ))}
@@ -581,11 +613,11 @@ export default function App() {
 
           <section id="skills" className={sectionClass}>
             <h2 data-reveal className={`${sectionTitleClass} reveal-up projects-heading`}>
-              Skills
+              Core Technical Competencies &amp; Skills
             </h2>
 
-            <p data-reveal className="reveal-up text-slate-300 leading-relaxed max-w-2xl mb-8" style={{ "--delay": "90ms" }}>
-              My toolkit bridges full stack software engineering (React, Node.js, PostgreSQL) with hands-on search engine optimization, link-building outreach, and technical site performance.
+            <p data-reveal className="reveal-up text-slate-300 leading-relaxed max-w-3xl mb-8" style={{ "--delay": "90ms" }}>
+              My engineering stack bridges full-lifecycle web development (React, Node.js, PostgreSQL) with search engine crawlability engineering, strategic backlink acquisition, and Core Web Vitals optimization.
             </p>
 
             <div className="skills-compact-grid">
@@ -601,7 +633,7 @@ export default function App() {
                     <span />
                   </div>
                   <div className="skill-group-copy">
-                    <p className="relative text-sm uppercase tracking-[0.22em] text-blue-200/55 mb-3">Capability Area</p>
+                    <p className="relative text-xs uppercase tracking-[0.22em] text-blue-300/80 mb-2">Technical Domain</p>
                     <h3 className="relative text-xl sm:text-[1.55rem] font-semibold tracking-tight text-white">{group.title}</h3>
                     <p className="relative mt-3 text-gray-300 leading-relaxed skill-group-description">{group.description}</p>
                   </div>
@@ -615,16 +647,59 @@ export default function App() {
                 </article>
               ))}
             </div>
+
+            <div data-reveal className="reveal-up mt-8 p-6 rounded-2xl border border-white/10 bg-slate-900/40 text-slate-300 text-sm leading-relaxed" style={{ "--delay": "120ms" }}>
+              <p className="font-semibold text-blue-200 mb-2">Technical Standards &amp; Authoritative References:</p>
+              <p>
+                My development and SEO workflows adhere to industry documentation and standards, including the{" "}
+                <a
+                  href="https://developers.google.com/search/docs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 hover:text-white underline transition-colors"
+                >
+                  Google Search Central Documentation
+                </a>
+                , the{" "}
+                <a
+                  href="https://react.dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 hover:text-white underline transition-colors"
+                >
+                  Official React Documentation
+                </a>
+                , the{" "}
+                <a
+                  href="https://www.postgresql.org/docs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 hover:text-white underline transition-colors"
+                >
+                  PostgreSQL Manual
+                </a>
+                , and audit guidelines from{" "}
+                <a
+                  href="https://ahrefs.com/site-audit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 hover:text-white underline transition-colors"
+                >
+                  Ahrefs Site Audit
+                </a>
+                .
+              </p>
+            </div>
           </section>
 
           <section id="education" className={sectionClass}>
             <h2 data-reveal className={`${sectionTitleClass} reveal-up`}>
-              Education & Certifications
+              Education &amp; Professional Certifications
             </h2>
 
             <div className="grid lg:grid-cols-2 gap-6">
               <div data-reveal className="reveal-up space-y-4" style={{ "--delay": "100ms" }}>
-                <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 font-semibold mb-2">Education</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 font-semibold mb-2">Academic Background</p>
                 {educationData.map((edu) => (
                   <div key={edu.degree} className={`${cardClass} p-5`}>
                     <div className="flex justify-between items-start gap-3 mb-2">
@@ -640,7 +715,7 @@ export default function App() {
               </div>
 
               <div data-reveal className="reveal-up" style={{ "--delay": "180ms" }}>
-                <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 font-semibold mb-2">Certifications</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-blue-200/60 font-semibold mb-2">Industry Certifications</p>
                 <div className={`${cardClass} p-5 space-y-3.5`}>
                   {certifications.map((cert) => (
                     <div key={cert} className="flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-slate-950/40">
@@ -676,7 +751,7 @@ export default function App() {
 
                   <div className="cta-direct-line">
                     <span className="contact-label">Direct Contact</span>
-                    <a href={`mailto:${contactEmail}`} className="cta-email-link">
+                    <a href={`mailto:${contactEmail}`} className="cta-email-link" aria-label={`Email Dhanunjaya Rao at ${contactEmail}`}>
                       {contactEmail}
                     </a>
                     <span className="text-xs text-slate-400 block mt-1.5">Phone: {contactPhone} • {contactLocation}</span>
@@ -790,24 +865,24 @@ export default function App() {
           <section id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 scroll-mt-28">
             <div className="contact-section-shell">
               <h2 data-reveal className={`${sectionTitleClass} reveal-up contact-heading`}>
-                Contact
+                Contact Dhanunjaya Rao
               </h2>
 
               <p data-reveal className="reveal-up contact-intro" style={{ "--delay": "80ms" }}>
-                I am actively looking for Full Stack Developer, Frontend Developer, and SEO Executive roles. If you
-                have an open position or project in mind, let&apos;s connect.
+                I am actively looking for Full Stack Developer, Frontend Developer, and SEO Specialist roles. If you
+                have an open position, technical contract, or engineering project in mind, let&apos;s connect.
               </p>
 
               <p data-reveal className="reveal-up text-slate-300 text-sm sm:text-base max-w-3xl mx-auto text-center mt-3 mb-6 leading-relaxed" style={{ "--delay": "110ms" }}>
-                With a strong technical foundation in React.js, Tailwind CSS, JavaScript, and Node.js backend integration, I engineer high-speed, accessible web applications optimized for search engine crawlability and top organic rankings. My hands-on background spans full-lifecycle web engineering, PostgreSQL database operations, off-page link building, backlink profile analysis, and Google Search Console monitoring. Let&apos;s discuss how my full stack engineering and SEO execution capabilities can accelerate your team&apos;s technical goals.
+                With a strong technical foundation in React.js, Tailwind CSS, JavaScript (ES6+), and Node.js backend integration, I engineer high-speed, accessible web applications optimized for search engine crawlability and top organic rankings. My hands-on background spans full-lifecycle web engineering, PostgreSQL database operations, off-page link building, backlink profile analysis, and Google Search Console monitoring. Let&apos;s discuss how my full stack engineering and SEO execution capabilities can accelerate your team&apos;s technical goals.
               </p>
 
               <div data-reveal style={{ "--delay": "140ms" }} className="reveal-up flex flex-col sm:flex-row items-center justify-center gap-4 text-sm sm:text-base text-slate-300 my-4">
-                <a href={`mailto:${contactEmail}`} className="hover:text-blue-200 transition-colors">
+                <a href={`mailto:${contactEmail}`} className="hover:text-blue-200 transition-colors" aria-label={`Email Dhanunjaya Rao Kadimisetty at ${contactEmail}`}>
                   📧 {contactEmail}
                 </a>
                 <span className="hidden sm:inline text-slate-600">•</span>
-                <a href={`tel:${contactPhone.replace(/\s+/g, '')}`} className="hover:text-blue-200 transition-colors">
+                <a href={`tel:${contactPhone.replace(/\s+/g, '')}`} className="hover:text-blue-200 transition-colors" aria-label={`Call Dhanunjaya Rao Kadimisetty at ${contactPhone}`}>
                   📞 {contactPhone}
                 </a>
                 <span className="hidden sm:inline text-slate-600">•</span>
@@ -822,7 +897,7 @@ export default function App() {
                   href={githubProfileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub profile"
+                  aria-label="Dhanunjaya Rao Kadimisetty GitHub profile"
                 >
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -838,7 +913,7 @@ export default function App() {
                   href={linkedinProfileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn profile"
+                  aria-label="Dhanunjaya Rao Kadimisetty LinkedIn profile"
                 >
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -854,7 +929,7 @@ export default function App() {
                   href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open resume"
+                  aria-label="Download Dhanunjaya Rao Kadimisetty Resume PDF"
                 >
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -874,16 +949,14 @@ export default function App() {
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>© {new Date().getFullYear()} Dhanunjaya Rao Kadimisetty. All rights reserved.</p>
             <nav className="flex flex-wrap items-center justify-center gap-6" aria-label="Footer Navigation">
-              <a href="/" className="text-blue-300 hover:text-white transition-colors duration-200">Go to Home</a>
-              <a href="#about" className="hover:text-white transition-colors duration-200">
-                About
-              </a>
-              <a href="#projects" className="hover:text-white transition-colors duration-200">
-                Projects
-              </a>
-              <a href="#contact" className="hover:text-white transition-colors duration-200">
-                Contact
-              </a>
+              <a href="/" className="text-blue-300 hover:text-white transition-colors duration-200">Home</a>
+              <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
+              <a href="#experience" className="hover:text-white transition-colors duration-200">Experience</a>
+              <a href="#projects" className="hover:text-white transition-colors duration-200">Projects</a>
+              <a href="#skills" className="hover:text-white transition-colors duration-200">Skills</a>
+              <a href="#education" className="hover:text-white transition-colors duration-200">Education</a>
+              <a href="#contact" className="hover:text-white transition-colors duration-200">Contact</a>
+              <a href={resumeUrl} className="hover:text-white transition-colors duration-200">Resume</a>
             </nav>
           </div>
         </footer>

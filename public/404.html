@@ -1,11 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found | Dhanunjaya Rao Portfolio</title>
+    <title>404 - Page Not Found | Dhanunjaya Rao Kadimisetty</title>
     <meta name="robots" content="noindex, follow" />
-    <link rel="canonical" href="https://dhanunjayarao-portfolio.vercel.app/" />
     <style>
       body {
         margin: 0;
@@ -48,6 +47,12 @@
         border-radius: 1rem;
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+      }
       a {
         display: inline-block;
         background: #2563eb;
@@ -62,18 +67,31 @@
         background: #1d4ed8;
         transform: translateY(-2px);
       }
+      a.secondary {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #cbd5e1;
+      }
+      a.secondary:hover {
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+      }
     </style>
   </head>
   <body>
     <div class="card">
       <h1>404 - Page Not Found</h1>
-      <p>The page or resource you are looking for has been moved or does not exist.</p>
+      <p>The page or resource you requested could not be found or has moved.</p>
       <div class="summary">
         <p style="margin: 0;">
-          Dhanunjaya Rao is a Full Stack Developer and SEO Executive specializing in modern React.js, Tailwind CSS, Node.js, and PostgreSQL engineering. His technical background unites scalable frontend architectures with search engine crawlability and link-building execution. Use the verified navigation link below to return directly to the main portfolio.
+          Dhanunjaya Rao Kadimisetty is a Full Stack Developer and Technical SEO Specialist engineering scalable React.js and Node.js web applications. Use the links below to navigate back to the main portfolio or explore featured projects.
         </p>
       </div>
-      <a href="/">Go to Home</a>
+      <div class="actions">
+        <a href="/">Return to Home</a>
+        <a href="/#projects" class="secondary">View Projects</a>
+        <a href="/#contact" class="secondary">Contact</a>
+      </div>
     </div>
   </body>
 </html>
