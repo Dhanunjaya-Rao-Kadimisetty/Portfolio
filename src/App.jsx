@@ -192,6 +192,7 @@ const certifications = [
   "HTML Essentials – Cisco Networking Academy",
   "Legacy Responsive Web Design V8 – freecodecamp",
   "Digital Marketing Certified – HubSpot Academy",
+  "Email Marketing Certified – HubSpot Academy"
 ];
 
 export default function App() {
